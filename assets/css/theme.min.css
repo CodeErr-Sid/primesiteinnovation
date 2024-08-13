@@ -3086,23 +3086,24 @@ body.loaded:after {
     opacity: 0.25
 }
 
+
 /* Riotating Cta */
 .prime_sec{
     margin-bottom: -50px;
 }
 
-#revveal {
+/* #revveal {
     opacity: 0;
     transform: translateY(20px);
     transition: opacity 2s ease-out, transform 2s ease-out;
-    color: red; /* Light color before reveal */
+    color: red; 
 }
 
 #revveal.revealed {
     opacity: 1;
     transform: translateY(0);
-    color: white; /* Darker color after reveal */
-}
+    color: white; 
+}  */
 
 
 /*  */
@@ -3259,3 +3260,5 @@ body.loaded:after {
         font-size: 16px;
     }
 }
+/*  */
+

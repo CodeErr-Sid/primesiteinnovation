@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
 	
-<!-- Mirrored from sana.flatheme.net/index-corporate-dark.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 11 Aug 2024 09:33:44 GMT -->
+
 <head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -16,6 +16,10 @@
 		<link href="assets/plugins/swiper/swiper-bundle.min.css" rel="stylesheet">
 		<link href="assets/plugins/scrollcue/scrollcue.css" rel="stylesheet">
 		<link href="assets/css/theme.min.css" rel="stylesheet">
+
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollTrigger.min.js"></script>
+
 		<!-- Fonts/Icons -->
 		<link href="assets/plugins/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
 		<link href="assets/plugins/fontawesome/css/all.css" rel="stylesheet">
@@ -81,6 +85,12 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-12 col-xl-10 offset-xl-1 text-center">
+					
+						  
+						  
+						  
+						  
+						  
 						<h1 class="hero-text display-1 fw-medium">Digital <span class="d-inline-block fw-semi-bold stroke-text">Marketing</span> <span class="d-inline-block fw-semi-bold stroke-text">Service</span> Agency</h1>
 						<div class="d-md-flex align-items-center justify-content-center mt-5">
 							<ul class="avatar-group">
@@ -119,7 +129,7 @@
 					</video>
 					<div class="about-container-sidd">
 						<div class="about-left-sidd">
-							<h2 class="about-title-sidd">About us</h2>
+							<h2 class="about-title-sidd" id="about-txt">About us</h2>
 							<!-- <a href="video-link-url" class="video-link-sidd">Add a video</a> -->
 						</div>
 						<div class="about-right-sidd" >
@@ -695,22 +705,22 @@
 		  
 			  </section>
 			  <script>
-				document.addEventListener('DOMContentLoaded', function() {
-    const revealText = document.getElementById('revveal');
+// 				document.addEventListener('DOMContentLoaded', function() {
+//     const revealText = document.getElementById('revveal');
 
-    const revealOnScroll = () => {
-        const scrollPosition = window.scrollY + window.innerHeight;
-        const elementPosition = revealText.getBoundingClientRect().top + window.scrollY;
+//     const revealOnScroll = () => {
+//         const scrollPosition = window.scrollY + window.innerHeight;
+//         const elementPosition = revealText.getBoundingClientRect().top + window.scrollY;
 
-        if (scrollPosition > elementPosition) {
-            revealText.classList.add('revealed');
-        } else {
-            revealText.classList.remove('revealed');
-        }
-    };
+//         if (scrollPosition > elementPosition) {
+//             revealText.classList.add('revealed');
+//         } else {
+//             revealText.classList.remove('revealed');
+//         }
+//     };
 
-    window.addEventListener('scroll', revealOnScroll);
-});
+//     window.addEventListener('scroll', revealOnScroll);
+// });
 
 			  </script>
 		<!-- Rotating Cta -->
@@ -962,8 +972,118 @@
 		</script>
 
 
+<!-- founder -->
+<script>// Wait for the DOM to be fully loaded
+	document.addEventListener("DOMContentLoaded", function() {
+		gsap.registerPlugin(ScrollTrigger);
+	
+		// Split the paragraph into words
+		const words = gsap.utils.toArray(".about-quote-sidd")[0].innerText.split(" ");
+	
+		// Create individual span elements for each word
+		const paragraph = document.querySelector(".about-quote-sidd");
+		paragraph.innerHTML = ""; // Clear the existing content
+	
+		words.forEach((word) => {
+			const span = document.createElement("span");
+			span.classList.add("word-sidd");
+			span.textContent = word + " "; // Add a space after each word
+			paragraph.appendChild(span);
+		});
+	
+		// Animate each word as it scrolls into view
+		gsap.fromTo(".word-sidd", 
+			{ opacity: 0.2, y: 20 }, // Starting opacity and position
+			{ 
+				opacity: 1, // Fully visible
+				y: 0, // Original position
+				duration: 0.5, // Duration of the effect for each word
+				ease: "power2.out",
+				stagger: {
+					each: 0.3, // Delay between each word's animation
+					from: "start", // Start the animation from the first word
+				},
+				scrollTrigger: {
+					trigger: ".about-right-sidd",
+					start: "top 80%", // Adjust this to control when the effect starts
+					end: "bottom 60%", // Adjust this to control when the effect ends
+					scrub: true, // Link the animation to the scroll progress
+				}
+			}
+		);
+	});
+	
+</script>
+
+<script>
+// Wait for the DOM to be fully loaded
+document.addEventListener("DOMContentLoaded", function() {
+    gsap.registerPlugin(ScrollTrigger);
+
+    // Create the animation for the text reveal
+    gsap.from("#about-txt", {
+        scrollTrigger: {
+            trigger: "#about-txt",
+            start: "top 80%", // Adjust this to when you want the effect to start
+            end: "bottom 20%", // Adjust this if you want the animation to continue until a certain point
+            toggleActions: "play none none none", // Play the animation on enter, do nothing on leave
+        },
+        opacity: 0, // Start with opacity 0
+        y: 50, // Slide the text in from 50px down
+        duration: 1.5, // Duration of the animation
+        ease: "power3.out", // Smooth easing for the animation
+    });
+});
+
+
+  </script>
+<!--  -->
+
+<script>
+// Wait for the DOM to be fully loaded
+document.addEventListener("DOMContentLoaded", function() {
+    gsap.registerPlugin(ScrollTrigger);
+
+    // Split the heading into words
+    const words = gsap.utils.toArray("#revveal")[0].innerText.split(" ");
+
+    // Clear the existing content
+    const heading = document.querySelector("#revveal");
+    heading.innerHTML = ""; 
+
+    // Create individual span elements for each word
+    words.forEach((word) => {
+        const span = document.createElement("span");
+        span.classList.add("word-reveal");
+        span.textContent = word + " "; // Add a space after each word
+        heading.appendChild(span);
+    });
+
+    // Animate each word as it scrolls into view
+    gsap.fromTo(".word-reveal", 
+        { opacity: 0.2, y: 20 }, // Starting opacity and position
+        { 
+            opacity: 1, // Fully visible
+            y: 0, // Original position
+            duration: 2, // Duration of the effect for each word
+            ease: "power2.out",
+            stagger: {
+                each: 0.5, // Delay between each word's animation
+                from: "start", // Start the animation from the first word
+            },
+            scrollTrigger: {
+                trigger: ".cta-text_wrap",
+                start: "top 80%", // Adjust this to control when the effect starts
+                end: "bottom 60%", // Adjust this to control when the effect ends
+                scrub: true, // Link the animation to the scroll progress
+            }
+        }
+    );
+});
+
+
+</script>
 
 	</body>
 
-<!-- Mirrored from sana.flatheme.net/index-corporate-dark.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 11 Aug 2024 09:33:45 GMT -->
 </html>
