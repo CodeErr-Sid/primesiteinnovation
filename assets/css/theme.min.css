@@ -2580,7 +2580,7 @@ body.loaded:after {
     bottom: 0;
     left: 0;
     opacity: 0.4;
-    background: linear-gradient(45deg, #d4ed91 0%, #c2dd42 50%, #a8c536 100%);;
+    background: linear-gradient(45deg, #d4ed91 0%, #c2dd42 50%, #a8c536 100%);
     height: 30%;
     -webkit-animation: line-out 0.4s cubic-bezier(0.165, 0.84, 0.44, 1) both;
     animation: line-out 0.4s cubic-bezier(0.165, 0.84, 0.44, 1) both
@@ -3089,4 +3089,173 @@ body.loaded:after {
 /* Riotating Cta */
 .prime_sec{
     margin-bottom: -50px;
+}
+
+#revveal {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 2s ease-out, transform 2s ease-out;
+    color: red; /* Light color before reveal */
+}
+
+#revveal.revealed {
+    opacity: 1;
+    transform: translateY(0);
+    color: white; /* Darker color after reveal */
+}
+
+
+/*  */
+
+.about-section-sidd {
+    position: relative;
+    padding: 15px;
+    margin-bottom: 30px;
+    /* font-family: 'monts'; */
+    overflow: hidden; /* Ensures that the video doesn't overflow the section */
+    color: white; /* Ensures that text is readable */
+}
+
+.background-video-sidd {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* object-fit: cover;  */
+    z-index: -1; 
+    opacity: 0.6; 
+}
+
+.about-container-sidd {
+    position: relative; /* Keeps the text content on top of the video */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.about-left-sidd {
+    padding-right: 20px;
+    max-width: 200px; /* Control the width of the left section */
+}
+
+.about-title-sidd {
+    font-size: 30px;
+    font-weight: bold;
+    /* color: linear-gradient(45deg, #d4ed91 0%, #c2dd42 50%, #a8c536 100%); */
+    margin-bottom: 10px;
+    background: linear-gradient(45deg, #d4ed91 0%, #c2dd42 50%, #a8c536 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent; /* This hides the default text color, so the gradient is visible */
+            background-clip: text;
+            color: transparent
+}
+
+.video-link-sidd {
+    font-size: 14px;
+    color: #66b3ff;
+    text-decoration: none;
+    margin-top: 10px;
+    display: inline-block;
+}
+
+.video-link-sidd:hover {
+    text-decoration: underline;
+}
+
+.about-right-sidd {
+    padding-left: 20px;
+}
+
+.about-quote-sidd {
+    font-size: 24px;
+    line-height: 1.5;
+    color: white; /* Color of the quote */
+    margin-bottom: 40px;
+    max-width: 800px; /* Control the width of the text block */
+}
+
+.about-author-sidd {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.author-image-sidd {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+.author-info-sidd {
+    display: flex;
+    flex-direction: column;
+}
+
+.author-name-sidd {
+    font-size: 20px;
+    font-weight: bold;
+    background: linear-gradient(45deg, #d4ed91 0%, #c2dd42 50%, #a8c536 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent; /* This hides the default text color, so the gradient is visible */
+            background-clip: text;
+            color: transparent
+    margin: 0;
+}
+
+.author-title-sidd {
+    font-size: 14px;
+    color: #d1d1d1; /* Lighter color for the title */
+}
+
+
+/* Media Query for larger screens (desktops and tablets) */
+@media (min-width: 768px) {
+    .about-container-sidd {
+        flex-direction: row; /* Side by side layout for larger screens */
+    }
+
+    .about-left-sidd {
+        padding-right: 20px;
+        max-width: 200px;
+    }
+
+    .about-right-sidd {
+        padding-left: 20px;
+    }
+
+    .about-quote-sidd {
+        font-size: 24px; /* Increase font size for larger screens */
+        max-width: 800px; /* Set max width for larger screens */
+    }
+
+    .author-name-sidd {
+        font-size: 20px; /* Larger font size for author name */
+    }
+}
+
+/* Media Query for small screens (mobile devices) */
+@media (max-width: 767px) {
+    .about-container-sidd {
+        padding: 10px;
+    }
+
+    .about-title-sidd {
+        font-size: 16px;
+    }
+
+    .video-link-sidd {
+        font-size: 12px;
+    }
+
+    .about-quote-sidd {
+        font-size: 18px;
+    }
+
+    .author-name-sidd {
+        font-size: 16px;
+    }
 }

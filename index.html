@@ -111,46 +111,39 @@
 		<!-- end Hero section -->
 
 		<!-- About section -->
-		<div class="section-lg">
-			<div class="container">
-				<div class="row g-5 align-items-center">
-					<div class="col-12 col-lg-6">
-						<div class="row">
-							<div class="col-6 text-end">
-								<img class="img-mask-1" src="assets/images/about-4.jpg" alt="">
-								<div class="d-flex align-items-center justify-content-end mt-3">
-									<div class="d-inline-block pe-2">
-										<h4 class="line-height-100 fw-normal mb-0">+</h4>
-										<p class="sm-heading">Professionals</p>
-									</div>
-									<div class="d-inline-block">
-										<h1 class="fw-medium display-4 letter-spacing-1"><span class="counter">35</span></h1>
-									</div>
+		 		<!-- founder -->
+				 <section class="about-section-sidd" style="font-family: 'Poppins', sans-serif;" >
+					<video autoplay muted loop playsinline class="background-video-sidd">
+						<source src="media/vid2.webm" type="video/mp4">
+						Your browser does not support the video tag.
+					</video>
+					<div class="about-container-sidd">
+						<div class="about-left-sidd">
+							<h2 class="about-title-sidd">About us</h2>
+							<!-- <a href="video-link-url" class="video-link-sidd">Add a video</a> -->
+						</div>
+						<div class="about-right-sidd" >
+							<p class="about-quote-sidd" >
+								“We are a small team of experts from Ukraine, specializing in developing modern products that push the boundaries of design. We help small businesses, startups, and other brands to grow and win by turning ideas into functional solutions.
+								<br><br>
+								We closely collaborate with our clients to understand the needs and goals of the product, as communication is the key to the success of any project.”
+							</p>
+							<div class="about-author-sidd">
+								<img src="img/ayman.png" alt="Serhii Antoniuk" class="author-image-sidd">
+								<div class="author-info-sidd">
+									<h4 class="author-name-sidd">Syed Ayman</h4>
+									<p class="author-title-sidd">Founder - PrimeSite Innovations</p>
 								</div>
 							</div>
-							<div class="col-6">
-								<div class="d-flex align-items-center mb-3">
-									<div class="d-inline-block">
-										<h1 class="fw-medium display-4 letter-spacing-1"><span class="counter">14</span></h1>
-									</div>
-									<div class="d-inline-block ps-2">
-										<h4 class="line-height-100 fw-normal mb-0">+</h4>
-										<p class="sm-heading">Years of Experience</p>
-									</div>
-								</div>
-								<img class="img-mask-2" src="assets/images/about-3.jpg" alt="">
-							</div>
-						</div><!-- end row(inner) -->
+						</div>
 					</div>
-					<div class="col-12 col-lg-6">
-						<h6 class="title-heading mb-3">About Us</h6>
-						<h2 class="display-6 fw-normal mb-3">Using innovative strategies for outstanding results</h2>
-						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae modi dicta ea autem harum commodi quo obcaecati accusantium</p>
-						<a class="button button-lg button-font-2 mt-4" href="pages/about-us-dark.html">Learn More</a>
-					</div>
-				</div><!-- end row -->
-			</div><!-- end container -->
-		</div>
+				</section>
+
+
+
+		
+		 <!-- founder -->
+
 		<!-- end About section -->
 
 		<!-- Clients section -->
@@ -666,7 +659,7 @@
 					  <div class="content_wrapper">
 						<div class="cta-block">
 						  <div class="cta-text_wrap">
-							<h2 style="font-family: 'Poppins', sans-serif;" class="reveal-type">Have a project idea? Let's turn it into life</h2>
+							<h2 style="font-family: 'Poppins', sans-serif;" class="reveal-type" id="revveal" >Have a project idea? Let's turn it into life</h2>
 						  </div>
 						  <div class="cta-botom-line">
 							<!-- <div class="cta_email-part">
@@ -701,6 +694,25 @@
 				</section>
 		  
 			  </section>
+			  <script>
+				document.addEventListener('DOMContentLoaded', function() {
+    const revealText = document.getElementById('revveal');
+
+    const revealOnScroll = () => {
+        const scrollPosition = window.scrollY + window.innerHeight;
+        const elementPosition = revealText.getBoundingClientRect().top + window.scrollY;
+
+        if (scrollPosition > elementPosition) {
+            revealText.classList.add('revealed');
+        } else {
+            revealText.classList.remove('revealed');
+        }
+    };
+
+    window.addEventListener('scroll', revealOnScroll);
+});
+
+			  </script>
 		<!-- Rotating Cta -->
 
 
