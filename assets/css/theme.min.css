@@ -3085,3 +3085,8 @@ body.loaded:after {
 .theme-light .link-hover-2:before {
     opacity: 0.25
 }
+
+/* Riotating Cta */
+.prime_sec{
+    margin-bottom: -50px;
+}
