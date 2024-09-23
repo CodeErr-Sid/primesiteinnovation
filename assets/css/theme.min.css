@@ -195,11 +195,72 @@ a:not([class*='button']):focus {
     }
 }
 
-@media (min-width: 1920px) {
-    .section-box {
-        padding: 0 60px
+@media (min-width: 992px) {
+    .section-box .email {
+        padding-left: 90px;
     }
 }
+@media (min-width: 992px) {
+    .section-box .phone {
+        padding-left: 120px;
+    }
+}
+@media (min-width: 1200px) {
+    .section-box .email {
+        padding-left: 140px;
+    }
+}
+@media (min-width: 1200px) {
+    .section-box .phone {
+        padding-left: 190px;
+    }
+}
+@media (min-width: 1200px) {
+    .section-box .email h4 {
+        font-size: 24px;
+    }
+}
+@media (min-width: 1200px) {
+    .section-box .phone h4, .phone p {
+        font-size: 20px;
+    }
+}
+@media (max-width: 1560px) {
+    .section-box .email h4 {
+        font-size: 24px;
+    }
+}
+@media (max-width: 1560px) {
+    .section-box .phone h4, .phone p {
+        font-size: 20px;
+    }
+}
+@media (max-width: 1600px) {
+    .section-box .footer-ptag {
+        font-size: 16px;
+    }
+}
+@media (max-width: 980px) {
+    .section-box .email h4 {
+        font-size: 20px;
+    }
+}
+@media (max-width: 980px) {
+    .section-box .phone h4, .phone p {
+        font-size: 19px;
+    }
+}
+@media (max-width: 980px) {
+    .section-box .footer-ptag {
+        font-size: 14px;
+    }
+}
+@media (max-width: 1200px) {
+    .section-box .footer-ptag {
+        font-size: 16px;
+    }
+}
+
 
 .bg-image {
     position: relative;
@@ -748,6 +809,7 @@ i {
     opacity: 0.05
 }
 
+
 .order-box:hover:after {
     opacity: 1
 }
@@ -780,9 +842,21 @@ i {
 @media (min-width: 992px) {
     .order-box .order {
         width: 92px;
-        min-width: 92px
+        min-width: 92px;
     }
 }
+
+@media (max-width: 1600px) {
+    .order-box p {
+        font-size: 15px;
+    }
+}
+@media (max-width: 1230px) {
+    .order-box p {
+        font-size: 14px;
+    }
+}
+
 
 .icon-box {
     position: relative;
@@ -1167,7 +1241,7 @@ button:active {
 .hero-text {
     font-size: 5.5rem;
     margin-top: 30px;
-    margin-bottom: 85px;
+    /* margin-bottom: 95px; */
 }
 
 @media (max-width: 1199.98px) {
