@@ -21,6 +21,11 @@
     z-index: 10000;
     overflow: hidden;
   }
+  .Loader-logo{
+    position: absolute;
+    top: 0;
+    left: 50px;
+  }
   
   #percent{
     position: absolute;
