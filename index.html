@@ -50,7 +50,7 @@
 				<h2 class="uppercase letter-spacing-1"><a href="#" class="nav-link"><img src="img/logo.png" alt="Primesite_logo" style="max-height: 85px;"></a></h2>
 			</div>
 			<div class="loading-text">
-				<h1>We develop digital <br> products and experience <br> for companies & startups</h1>
+				<h1 class="animate-prgh">We develop digital products and experience for companies & startups</h1>
 				<p>loading...</p>
 			</div>
 			<div id="percent">00%</div>
@@ -851,6 +851,16 @@
 	<script src="js/ScrollMagic.min.js"></script>
 	<script src="js/animation.gsap.min.js"></script>
 
+	<script>
+        // Simulate loading and swipe up after a few seconds
+        window.onload = function() {
+            setTimeout(() => {
+                document.querySelector('#loading-screen').classList.add('loader-hide');
+                document.querySelector('#main-content').classList.add('main-show');
+            }, 1600); // Adjust time as needed
+        };
+    </script>
+
 
 	<script>
 		document.addEventListener("DOMContentLoaded", function () {
@@ -1009,6 +1019,27 @@
 		}
 	</script>
 
+<script>
+	document.addEventListener("DOMContentLoaded", function () {
+		const paragraph = document.querySelector(".animate-prgh");
+		const words = paragraph.innerText.split(" "); // Split the paragraph into words
+
+		// Clear the original text
+		paragraph.innerHTML = ""; 
+
+		// Wrap each word in a span and append to the paragraph
+		words.forEach((word, index) => {
+			const span = document.createElement("span");
+			span.classList.add("animateword");
+			span.textContent = word + " "; // Add space after each word
+			paragraph.appendChild(span);
+
+			// Apply animation delay for each word
+			span.style.animationDelay = `${index * 0.3}s`; // Stagger based on index
+		});
+	});
+</script>
+
 
 	<!-- founder -->
 	<script>// Wait for the DOM to be fully loaded
@@ -1052,6 +1083,8 @@
 		});
 
 	</script>
+
+
 
 	<script>
 		// Wait for the DOM to be fully loaded
