@@ -804,12 +804,21 @@ i {
     transition: linear 0.1s
 }
 .headpart{
-    background: linear-gradient(45deg, #d4ed91 0%, #c2dd42 50%, #a8c536 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            color: transparent;
+  color: white;
 }
+.headpart:hover{
+    color: #c2dd42;
+}
+
+@keyframes flick {
+    0% {
+      background-position: top left;
+    }
+    100% {
+      background-position: top right;
+    }
+  }
+
 
 
 .order-box:hover:before {
@@ -1249,35 +1258,45 @@ button:active {
 .hero-text {
     font-size: 5.5rem;
     margin-top: 30px;
-    /* margin-bottom: 95px; */
+    /* color: #45473f; */
+    color: #fffefe81;
+    background: -webkit-gradient(linear, left top, right top, from(#e6e6e6), to(#1d1c1c), color-stop(0.8, #ffffff)) no-repeat;
+    background: gradient(linear, left top, right top, from(#222), to(#222), color-stop(0.8, #fff)) no-repeat;
+    /* background: linear-gradient(162deg, rgba(2,0,36,1) 0%, rgba(10,10,65,1) 31%, rgba(0,212,255,1) 100%); */
+  background-size: 70px 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: black;
+  -webkit-text-stroke: 2px;
+  animation: flick 2s infinite;
 }
 
 @media (max-width: 1199.98px) {
     .hero-text {
-        font-size: 3rem;
+        font-size: 3rem
     }
 }
 
 @media (max-width: 991.98px) {
     .hero-text {
-        font-size: 3rem;
+        font-size: 3rem
     }
 }
 
 @media (max-width: 767.98px) {
     .hero-text {
-        font-size: 2.5rem;
+        font-size: 2.5rem
     }
 }
 
 .hero-text span {
-    display: block;
-    background: black;
+    background: linear-gradient(45deg, #d4ed91 0%, #c2dd42 50%, #a8c536 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent; /* This hides the default text color, so the gradient is visible */
             background-clip: text;
             color: transparent;
 }
+
 
 .hero-play-btn {
     position: relative;
@@ -1965,7 +1984,7 @@ button.mfp-close:hover {
 .header .header-menu .nav .nav-item .nav-link:hover,
 .header .header-menu .nav .nav-item .nav-link.active {
     background: rgba(0, 0, 0, 0.3);
-    color: white
+    color: white;
 }
 
 .header .header-menu .nav .nav-item .nav-dropdown .nav-dropdown-item {
@@ -2002,7 +2021,7 @@ button.mfp-close:hover {
 
 .header .header-menu .nav .nav-item:hover .nav-link {
     background: rgba(0, 0, 0, 0.3);
-    color: white
+    color: #c2dd42
 }
 
 @media (min-width: 992px) {
