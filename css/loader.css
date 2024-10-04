@@ -18,7 +18,7 @@
     z-index: 1000;
     font-family: "Manrope", sans-serif;
     overflow: hidden;
-    transition: opacity 5s ease-in-out, transform 1s ease-in-out;
+    transition: opacity 5s ease-in-out, transform 2s ease-in-out;
   }
   .loader-hide {
     opacity: 0;
