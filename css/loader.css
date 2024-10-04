@@ -19,6 +19,7 @@
     right: 0;
     opacity: 1;
     z-index: 10000;
+    font-family: "Manrope", sans-serif;
     overflow: hidden;
     transition: opacity 5s ease-in-out, transform 1s ease-in-out;
   }
