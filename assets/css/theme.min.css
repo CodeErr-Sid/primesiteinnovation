@@ -212,7 +212,7 @@ a:not([class*='button']):focus {
 }
 @media (min-width: 1200px) {
     .section-box .phone {
-        padding-left: 190px;
+        padding-left: 230px;
     }
 }
 @media (min-width: 1200px) {
@@ -797,16 +797,24 @@ i {
     right: 0;
     left: 0;
     opacity: 0.6;
-    background-image: linear-gradient(45deg, #d4ed91 0%, #c2dd42 50%, #a8c536 100%);;
+    background-image: linear-gradient(45deg, #d4ed91 0%, #c2dd42 50%, #a8c536 100%);
     width: auto;
     height: 1px;
     -webkit-transition: linear 0.1s;
     transition: linear 0.1s
 }
+.headpart{
+    background: linear-gradient(45deg, #d4ed91 0%, #c2dd42 50%, #a8c536 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            color: transparent;
+}
+
 
 .order-box:hover:before {
     visibility: visible;
-    opacity: 0.05
+    opacity: 0.05;
 }
 
 
@@ -1263,7 +1271,12 @@ button:active {
 }
 
 .hero-text span {
-    display: block
+    display: block;
+    background: black;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent; /* This hides the default text color, so the gradient is visible */
+            background-clip: text;
+            color: transparent;
 }
 
 .hero-play-btn {
@@ -2435,8 +2448,8 @@ body.loaded:after {
 .loaded .preloader {
     visibility: hidden;
     opacity: 0;
-    -webkit-transition: ease-out 0.4s;
-    transition: ease-out 0.4s
+    -webkit-transition: ease-out 0.2s;
+    transition: ease-out 0.2s
 }
 
 @keyframes loader-spin {
