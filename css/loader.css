@@ -59,7 +59,7 @@
   .animate-prgh {
     text-align: left;
     color: rgb(255, 255, 255);
-    font-size: clamp(1.66rem, 1.3868rem + 1.1207vw, 2.4375rem);
+    font-size: clamp(1.7rem, 1.4409rem + 1.0631vw, 2.4375rem);
     width: clamp(20rem, 11.765vw + 17.132rem, 31.25rem);
     font-weight: normal;
 }
