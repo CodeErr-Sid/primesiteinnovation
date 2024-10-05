@@ -59,7 +59,7 @@
   .animate-prgh {
     text-align: left;
     color: rgb(255, 255, 255);
-    font-size: clamp(1.5625rem, 1.2551rem + 1.2613vw, 2.4375rem);
+    font-size: clamp(1.62rem, 1.3328rem + 1.1784vw, 2.4375rem);
     width: clamp(17.5rem, 14.379vw + 13.995rem, 31.25rem);
     font-weight: normal;
 }
@@ -71,7 +71,7 @@
   .animate-prgh {
     position: absolute;
     top: 120px;
-    left: 20px;
+    left: 10px;
   }
 }
 @media (max-width: 430px) {
@@ -86,7 +86,7 @@
   .animate-prgh {
     position: absolute;
     bottom: 122px;
-    left: 40px;
+    left: 30px;
   }
 }
 @media (max-width: 1600px) {
@@ -95,7 +95,6 @@
   position: absolute;
   bottom: 30px;
   left: 30px;
-  padding-left: 10px;
 }
 }
 
