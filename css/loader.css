@@ -7,7 +7,7 @@
     height: 100%;
     background: black;
     backdrop-filter: blur(10px); 
-    padding: 24px 0px; 
+    padding: 40px 0px; 
     display: flex;
     justify-content: flex-start;
     align-items: flex-end;
@@ -18,7 +18,7 @@
     z-index: 1000;
     font-family: "Manrope", sans-serif;
     overflow: hidden;
-    transition: opacity 7s ease-in-out, transform 2s ease-in-out;
+    transition: opacity 7s ease-in-out, transform 3s ease-in-out;
   }
   .loader-hide {
     opacity: 0;
@@ -30,8 +30,7 @@
 }
   .Loader-logo{
     position: absolute;
-
-    top: 0;
+    top: 15px;
     left: 40px;
   }
   #percent{
@@ -50,9 +49,10 @@
   .loading-text {
     font-family: "Manrope", sans-serif;
     text-align: left;
+    
   }
   .loading-text P{
-    font-size: clamp(0.9375rem, 0.8167rem + 0.4955vw, 1.28125rem);
+    font-size: clamp(1rem, 0.9012rem + 0.4054vw, 1.28125rem);
     color: rgba(255, 255, 255, 0.39);
   }
   
@@ -61,6 +61,7 @@
     color: rgb(255, 255, 255);
     font-size: clamp(1.5625rem, 1.2551rem + 1.2613vw, 2.4375rem);
     width: clamp(17.5rem, 14.379vw + 13.995rem, 31.25rem);
+    font-weight: normal;
 }
 .animateword{
     opacity: 0.3; 
@@ -69,7 +70,7 @@
 @media (max-width: 430px) {
   .animate-prgh {
     position: absolute;
-    top: 110px;
+    top: 120px;
     left: 20px;
   }
 }
