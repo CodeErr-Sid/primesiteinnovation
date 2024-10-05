@@ -18,7 +18,7 @@
     z-index: 1000;
     font-family: "Manrope", sans-serif;
     overflow: hidden;
-    transition: opacity 7s ease-in-out, transform 3s ease-in-out;
+    transition: opacity 5s ease-in-out, transform 2s ease-in-out;
   }
   .loader-hide {
     opacity: 0;
@@ -52,7 +52,7 @@
     
   }
   .loading-text P{
-    font-size: clamp(1rem, 0.9012rem + 0.4054vw, 1.28125rem);
+    font-size: clamp(1.125rem, 1.0701rem + 0.2252vw, 1.28125rem);
     color: rgba(255, 255, 255, 0.39);
   }
   
