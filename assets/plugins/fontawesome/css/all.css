@@ -7453,7 +7453,7 @@ readers do not read off random characters that represent icons */
 .fa-autoprefixer:before {
   content: "\f41c"; }
 
-.fa-whatsapp:before {
+.fa-<a href="https://wa.me/918438807386">Whatsapp</a>:before {
   content: "\f232"; }
 
 .fa-slideshare:before {
@@ -7774,10 +7774,10 @@ readers do not read off random characters that represent icons */
 .fa-odysee:before {
   content: "\e5c6"; }
 
-.fa-square-whatsapp:before {
+.fa-square-<a href="https://wa.me/918438807386">Whatsapp</a>:before {
   content: "\f40c"; }
 
-.fa-whatsapp-square:before {
+.fa-<a href="https://wa.me/918438807386">Whatsapp</a>-square:before {
   content: "\f40c"; }
 
 .fa-node-js:before {
